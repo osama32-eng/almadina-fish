@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أسماك المدينة المنورة | أصل الحكاية - المعمورة</title>
+  
+  <!-- خط Cairo الأنيق من جوجل -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- مكتبة الأيقونات FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-navy: #0b2545;
+      --brand-yellow: #ffcc00;
+      --brand-red: #dc2626;
+      --light-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #1eb855;
+      --instapay-purple: #4c1d95;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-main);
+      line-height: 1.8;
+      padding-bottom: 85px;
+    }
+
+    /* الهيدر العلوي بتدرج هادئ وألوان اللوجو */
+    header {
+      background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+      color: #ffffff;
+      padding: 26px 20px 22px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(11, 37, 69, 0.15);
+      position: relative;
+    }
+
+    .logo-container {
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      border: 4px solid var(--brand-yellow);
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .store-badge {
+      display: inline-block;
+      background: var(--brand-red);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 2px 16px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    header h1 {
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    header p {
+      color: #e2e8f0;
+      font-size: 14px;
+    }
+
+    /* الحاوية الرئيسية */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    /* زر جروب الواتساب المباشر */
+    .group-invite-card {
+      background: #ecfdf5;
+      border: 1.5px solid #a7f3d0;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+    }
+
+    .group-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--whatsapp);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .group-btn:hover {
+      background-color: var(--whatsapp-hover);
+      transform: translateY(-2px);
+    }
+
+    /* كروت الأقسام الثلاثة */
+    .section-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border-color);
+      margin-bottom: 22px;
+    }
+
+    .section-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .section-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(11, 37, 69, 0.88);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .section-body {
+      padding: 18px;
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .items-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .items-list li {
+      font-size: 14.5px;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #f1f5f9;
+    }
+
+    .items-list li i {
+      color: #d97706;
+      font-size: 14px;
+    }
+
+    /* كارت الدفع بالمحفظة وانستاباي */
+    .payment-box {
+      background: #fdf4ff;
+      border: 1.5px solid #f0abfc;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .payment-box h4 {
+      color: var(--instapay-purple);
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .instapay-number-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid #d8b4fe;
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--instapay-purple);
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    .copy-btn {
+      background: var(--instapay-purple);
+      color: #fff;
+      border: none;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* نموذج الطلب بالواتساب */
+    .order-box {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border-color);
+      margin-bottom: 22px;
+    }
+
+    .order-box h3 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border-color);
+      font-size: 14.5px;
+      outline: none;
+      transition: border-color 0.2s;
+      background: #ffffff;
+    }
+
+    .form-input:focus {
+      border-color: #0284c7;
+    }
+
+    .number-choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .radio-card {
+      border: 1.5px solid var(--border-color);
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .radio-card input {
+      accent-color: var(--whatsapp);
+    }
+
+    .submit-order-btn {
+      width: 100%;
+      background: var(--whatsapp);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .submit-order-btn:hover {
+      background-color: var(--whatsapp-hover);
+    }
+
+    .submit-order-btn:active {
+      transform: scale(0.99);
+    }
+
+    /* كارت العنوان والتواصل */
+    .contact-box {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .contact-box h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-navy);
+      margin-bottom: 6px;
+    }
+
+    .address-text {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .direct-calls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .call-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: var(--primary-navy);
+      padding: 8px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 700;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* الشريط السفلي للموبايل */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+    }
+
+    .bottom-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .bottom-bar a.active {
+      color: var(--brand-red);
+      font-weight: 800;
+    }
+
+    .bottom-bar a i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر واللوجو الرسمي برابط مباشر أونلاين -->
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/237HTz1q/photo-2026-10-23-10-22-06.jpg" alt="لوجو أسماك المدينة المنورة أصل الحكاية">
+    </div>
+    <span class="store-badge">أصل الحكاية</span>
+    <h1>أسماك المدينة المنورة</h1>
+    <p>طازة من البحر إلى مائدتك مباشرة • دليفري وسفري بالمعمورة</p>
+  </header>
+
+  <div class="container">
+
+    <!-- كارت الانضمام المباشر لجروب الواتساب -->
+    <div class="group-invite-card">
+      <p style="font-weight: 800; margin-bottom: 8px; color: #065f46; font-size: 15px;">عروض وصيد اليوم الطازج أولاً بأول</p>
+      <a href="https://chat.whatsapp.com/DdSayoHGt4QI9kDekZyVWg" target="_blank" class="group-btn">
+        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+        <span>انضم لجروب عروض الواتساب</span>
+      </a>
+    </div>
+
+    <!-- 1. قسم الأسماك البحرية بصورة الصيد المباشرة أونلاين -->
+    <div class="section-card">
+      <div class="section-img-wrapper">
+        <img src="https://i.ibb.co/9mwD5R3C/photo-2026-10-23-10-18-47.jpg" alt="صيد أسماك المدينة المنورة الطازج">
+        <div class="section-tag">
+          <i class="fa-solid fa-fish"></i>
+          <span>الأسماك البحرية</span>
+        </div>
+      </div>
+      <div class="section-body">
+        <h2 class="section-title"><i class="fa-solid fa-fish-fins"></i> صيد اليوم المميز</h2>
+        <ul class="items-list">
+          <li><i class="fa-solid fa-check"></i> سمك بحر أبيض طازج (دنيس - قاروص - وقار) بجميع الأوزان</li>
+          <li><i class="fa-solid fa-check"></i> سمك بوري سنجاري إسكندراني بالخلطة بالفرن أو زيت وليمون</li>
+          <li><i class="fa-solid fa-check"></i> سمك بلطي بلدي فاخر (مشوي ردة - مقلي كرسبي مقرمش)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. قسم الجمبري وفواكه البحر -->
+    <div class="section-card">
+      <div class="section-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=700&q=80" alt="جمبري وفواكه بحر">
+        <div class="section-tag">
+          <i class="fa-solid fa-shrimp"></i>
+          <span>الجمبري وفواكه البحر</span>
+        </div>
+      </div>
+      <div class="section-body">
+        <h2 class="section-title"><i class="fa-solid fa-shrimp"></i> القشريات والطواجن</h2>
+        <ul class="items-list">
+          <li><i class="fa-solid fa-check"></i> جمبري مميز (باترفلاي بالزبدة والثوم - مشوي جريل - مقلي)</li>
+          <li><i class="fa-solid fa-check"></i> سبيط بلدي طازج (مقلي مقرمش بالخلطة أو طاجن بالفرن)</li>
+          <li><i class="fa-solid fa-check"></i> كابوريا نتي مبطرخة وطواجن سي فود ميكس بالوايت أو الريد صوص</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. قسم السلطات والأرز -->
+    <div class="section-card">
+      <div class="section-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80" alt="سلطات وأرز">
+        <div class="section-tag">
+          <i class="fa-solid fa-bowl-rice"></i>
+          <span>السلطات والمقبلات</span>
+        </div>
+      </div>
+      <div class="section-body">
+        <h2 class="section-title"><i class="fa-solid fa-utensils"></i> المقبلات والأرز</h2>
+        <ul class="items-list">
+          <li><i class="fa-solid fa-check"></i> طحينة سمسم بيضاء خام، بابا غنوج مدخن، وسلطة بلدي بالدقة</li>
+          <li><i class="fa-solid fa-check"></i> باذنجان مخلل بالخلطة والثوم والليمون وطماطم متبلة</li>
+          <li><i class="fa-solid fa-check"></i> أرز صيادية إسكندراني بني بالبصل المكرمل المميز</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- كارت الدفع بالمحفظة وانستاباي -->
+    <div class="payment-box">
+      <h4><i class="fa-solid fa-wallet"></i> متاح الدفع عبر فودافون كاش و InstaPay</h4>
+      <p style="font-size: 13px; color: #6b21a8; margin-bottom: 6px;">رقم التحويل للمحفظة وانستاباي:</p>
+      <div class="instapay-number-badge" onclick="copyNumber('01124410242')">
+        <span id="targetNum">01124410242</span>
+        <button type="button" class="copy-btn"><i class="fa-regular fa-copy"></i> نسخ</button>
+      </div>
+      <p id="copyAlert" style="font-size: 12px; color: #16a34a; display: none; font-weight: 700;">تم نسخ الرقم بنجاح!</p>
+    </div>
+
+    <!-- نموذج الطلب عبر الواتساب -->
+    <div class="order-box" id="order-section">
+      <h3><i class="fa-brands fa-whatsapp" style="color: var(--whatsapp);"></i> اطلب دليفري عبر الواتساب</h3>
+      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 14px;">حدد رقم الواتساب الذي تود الإرسال إليه واكتب طلبك:</p>
+      
+      <div class="number-choice-grid">
+        <label class="radio-card">
+          <input type="radio" name="targetPhone" value="201070163828" checked>
+          <span>واتساب 1 (01070163828)</span>
+        </label>
+        <label class="radio-card">
+          <input type="radio" name="targetPhone" value="201120407114">
+          <span>واتساب 2 (01120407114)</span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>اسم العميل الكريم:</label>
+        <input type="text" id="custName" class="form-input" placeholder="اكتب اسم حضرتك">
+      </div>
+
+      <div class="form-group">
+        <label>رقم تليفونك:</label>
+        <input type="tel" id="custPhone" class="form-input" placeholder="رقم الهاتف للتواصل">
+      </div>
+
+      <div class="form-group">
+        <label>الطلب والعنوان بالتفصيل:</label>
+        <textarea id="custOrder" rows="3" class="form-input" placeholder="مثال: 1 كيلو قاروص مشوي + 2 أرز صيادية + طحينة (العنوان بالتفصيل)"></textarea>
+      </div>
+
+      <button type="button" onclick="sendToWhatsApp()" class="submit-order-btn">
+        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+        <span>إرسال الطلب فوراً عبر الواتساب</span>
+      </button>
+    </div>
+
+    <!-- بيانات المكان وأرقام الاتصال المباشر -->
+    <div class="contact-box">
+      <h4><i class="fa-solid fa-location-dot" style="color: var(--brand-red);"></i> مكان المحل</h4>
+      <p class="address-text">الإسكندرية - شارع 25، المعمورة (قسم ثان المنتزة)</p>
+      
+      <p style="font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 8px;">للاتصال الهاتفي السريع والمباشر:</p>
+      <div class="direct-calls">
+        <a href="tel:01070163828" class="call-btn"><i class="fa-solid fa-phone"></i> 01070163828</a>
+        <a href="tel:01120407114" class="call-btn"><i class="fa-solid fa-phone"></i> 01120407114</a>
+      </div>
+
+      <div style="margin-top: 14px;">
+        <a href="https://maps.google.com/?q=31.3000438,30.0619813" target="_blank" style="color: #0284c7; font-size: 13.5px; font-weight: 700; text-decoration: none;">
+          <i class="fa-solid fa-map-location-dot"></i> فتح موقع المحل على خريطة جوجل
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- الشريط السفلي الثابت للموبايل -->
+  <div class="bottom-bar">
+    <a href="#" class="active"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a>
+    <a href="#order-section"><i class="fa-solid fa-motorcycle"></i><span>اطلب دليفري</span></a>
+    <a href="https://chat.whatsapp.com/DdSayoHGt4QI9kDekZyVWg" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>الجروب</span></a>
+    <a href="https://maps.google.com/?q=31.3000438,30.0619813" target="_blank"><i class="fa-solid fa-map-location-dot"></i><span>اللوكيشن</span></a>
+  </div>
+
+  <!-- الجافا سكريبت لتنسيق الرسالة ونسخ الرقم -->
+  <script>
+    function copyNumber(num) {
+      navigator.clipboard.writeText(num).then(() => {
+        const alertBox = document.getElementById('copyAlert');
+        alertBox.style.display = 'block';
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 2500);
+      });
+    }
+
+    function sendToWhatsApp() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const order = document.getElementById('custOrder').value.trim();
+      const selectedPhone = document.querySelector('input[name="targetPhone"]:checked').value;
+
+      if (!name || !order) {
+        alert("برجاء كتابة الاسم وتفاصيل الطلب أولاً!");
+        return;
+      }
+
+      const text = `السلام عليكم، حابب أطلب دليفري من *أسماك المدينة المنورة (أصل الحكاية)*:%0A%0A`
+                 + `👤 *اسم العميل:* ${encodeURIComponent(name)}%0A`
+                 + `📱 *رقم الهاتف:* ${encodeURIComponent(phone || 'غير مسجل')}%0A`
+                 + `🐟 *تفاصيل الطلب والعنوان:*%0A${encodeURIComponent(order)}`;
+
+      window.location.href = `https://wa.me/${selectedPhone}?text=${text}`;
+    }
+  </script>
+
+</body>
+</html>
